@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite" verbose="1">
-    <test name="Login">
+    <test name="Login" enabled="false">
         <classes>
-            <class name="LoginPageTest"></class>
+            <class name="LoginPageTest"/>
         </classes>
     </test>
 </suite>
