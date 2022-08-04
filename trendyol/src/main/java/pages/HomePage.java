@@ -11,11 +11,11 @@ public class HomePage extends BasePage{
     public HomePage(WebDriver driver, WebDriverWait wait) {
         super(driver, wait);
     }
+
     public HomePage visitUrl(String Url){
         driver.get(Url);
         return this;
     }
-
     public HomePage closePopup(){
         click(HomePageLocators.PopUpCloseButton);
         return this;

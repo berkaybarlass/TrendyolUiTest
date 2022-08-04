@@ -22,7 +22,7 @@ public class LoginPageTest extends DriverPage {
         loginPage
                 .emailInput(LoginPageLocators.emailInput, UserData.userEmail)
                 .passwordInput(LoginPageLocators.passwordInput, UserData.userPassword)
-                .loginVerify()
+                .loginVerify(LoginPageLocators.loginVerifyText, "Hesabım")
                 .logout();
 
     }
@@ -39,7 +39,7 @@ public class LoginPageTest extends DriverPage {
         loginPage
                 .emailInput(LoginPageLocators.emailInput, UserData.wrongEmail)
                 .passwordInput(LoginPageLocators.passwordInput, UserData.userPassword)
-                .errorVerify();
+                .errorVerify(LoginPageLocators.errorVerif,"E-posta adresiniz ve/veya şifreniz hatalı.");
     }
     @Test(priority = 3)
     public void emptyEmailLogin(){
@@ -53,7 +53,7 @@ public class LoginPageTest extends DriverPage {
         loginPage
                 .emailInput(LoginPageLocators.emailInput, UserData.emptyEmail)
                 .passwordInput(LoginPageLocators.passwordInput, UserData.userPassword)
-                .emptyEmailError();
+                .emptyEmailError(LoginPageLocators.emptyEmailErrorMessage, "Lütfen geçerli bir e-posta adresi giriniz.");
 
 
     }
@@ -70,7 +70,7 @@ public class LoginPageTest extends DriverPage {
         loginPage
                 .emailInput(LoginPageLocators.emailInput, UserData.userEmail)
                 .passwordInput(LoginPageLocators.passwordInput, UserData.wrongPassword)
-                .errorVerify();
+                .errorVerify(LoginPageLocators.errorVerif,"E-posta adresiniz ve/veya şifreniz hatalı.");
 
 
     }

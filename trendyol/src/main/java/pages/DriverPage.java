@@ -15,7 +15,6 @@ public class DriverPage {
     public WebDriver driver;
     public WebDriverWait wait;
 
-
     @BeforeTest
     public void setUp() {
         WebDriverManager.chromedriver().setup();
@@ -26,7 +25,6 @@ public class DriverPage {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
     }
-
     @AfterTest
     public void teardown() {
         driver.quit();
